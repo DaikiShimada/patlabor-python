@@ -38,6 +38,7 @@ def main():
 	# move .txt file
 	os.mkdir("sample")
 	shutil.move("./hoge.txt", "sample/")
+	time.sleep(2)
 	# delete .txt file
 	os.remove("sample/hoge.txt")
 	os.rmdir("sample")
