@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 from setuptools import setup, find_packages
-from patolabor-python import __author__, __version__, __license__
+from patolabor import __author__, __version__, __license__
 
 setup(
-	name = 'patolabor-python',
+	name = 'patolabor',
 	version = __version__,
 	description = 'Python module for observing file events',
 	license = __license__,

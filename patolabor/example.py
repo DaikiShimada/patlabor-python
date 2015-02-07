@@ -3,7 +3,7 @@
 
 import os
 import shutil
-import patolabor-python as pp
+import patolabor as pp
 
 class ExampleHandler(pp.FileEventHandler):
 	def on_add(self, item):
