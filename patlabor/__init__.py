@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Patlabor-python
-# version 0.0.1
+# version 0.0.3
 #
 # Copyright (c) 2015 Daiki SHIMADA
 #
@@ -18,5 +18,5 @@ from fileEventHandler import *
 from fileObserver import *
 
 __author__  = 'Daiki SHIMADA'
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 __license__ = 'MIT'
