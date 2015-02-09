@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Patolabor-python
+# Patlabor-python
 # version 0.0.1
 #
 # Copyright (c) 2015 Daiki SHIMADA
