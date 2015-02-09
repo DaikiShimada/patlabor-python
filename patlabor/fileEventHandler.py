@@ -5,6 +5,10 @@ class FileEventHandler():
 	def __init__(self):
 		pass
 
+	def on_init(self, item):
+		# procedure when there are initial items
+		print "initial item; %s was detected." %(item.filename)
+
 	def on_add(self, item):
 		#  procedure when an item is added
 		print "%s was added." %(item.filename)

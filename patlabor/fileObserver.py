@@ -44,6 +44,15 @@ class FileObserver(threading.Thread):
 
 		return fileList
 
+	def initCheckDir(self, recursive=True):
+		# get file list
+		fileList = self.getFileList()
+		# add to observed items list and call on_init event
+		for f in fileList:
+			item = ObservedItem(f)
+			self.observedItems.append(item)
+			self.handler.on_init(item)
+
 	def checkDir(self, recursive=True):
 		# get file list
 		fileList = self.getFileList()
@@ -94,6 +103,8 @@ class FileObserver(threading.Thread):
 		if self.handler is None:
 			sys.stderr.write("[ERROR]: you must set any event handler")
 			return
+		# first time checking
+		self.initCheckDir(self.recursive)
 		while not self.stop_event.is_set():
 			self.checkDir(self.recursive)
 			time.sleep(self.interval)
