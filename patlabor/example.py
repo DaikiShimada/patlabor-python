@@ -43,6 +43,7 @@ def main():
 	# delete .txt file
 	os.remove("sample/hoge.txt")
 	os.rmdir("sample")
+	time.sleep(2)
 	observer.stop()		
 
 if __name__ == '__main__':
