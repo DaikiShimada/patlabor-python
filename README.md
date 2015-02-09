@@ -1,9 +1,9 @@
-# Patolabor-python
+# Patlabor-python
 Python module for observing file events.
 
 ## Installation
 ```
-$ sudo pip install git+https://github.com/DaikiShimada/patolabor-python.git
+$ sudo pip install git+https://github.com/DaikiShimada/patlabor-python.git
 ```
 
 ## Example
