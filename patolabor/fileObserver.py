@@ -58,7 +58,7 @@ class FileObserver(threading.Thread):
 				if self.observedItems[idx].isModified(item):
 					self.observedItems.remove(item)
 					self.observedItems.append(item)
-					self.handler.on_modifyify(item)
+					self.handler.on_modify(item)
 				# remove exist file from deleted items list
 				deletedItems.remove(item)
 			else:
