@@ -2,27 +2,28 @@
 # -*- coding: utf-8 -*-
 
 import os
+import time
 import shutil
 import patolabor as pp
 
 class ExampleHandler(pp.FileEventHandler):
 	def on_add(self, item):
-		pass
+		print "added"
 
 	def on_modify(self, item):
-		pass
+		print "modified"
 
 	def on_move(self, item):
-		pass
+		print "moved"
 
 	def on_delete(self, item):
-		pass
+		print "deleted"
 
 def main():
 	here = os.path.abspath(os.path.dirname(__file__)) 
 	handler = ExampleHandler()
 	observer = pp.FileObserver()
-	observer.observedExts.apped('.txt')
+	observer.observedExts.append('.txt')
 	observer.setSchedule(handler=handler,
 						 interval=1,
 						 directory=here,
