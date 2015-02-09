@@ -4,9 +4,9 @@
 import os
 import time
 import shutil
-import patolabor as pp
+import patlabor
 
-class ExampleHandler(pp.FileEventHandler):
+class ExampleHandler(patlabor.FileEventHandler):
 	def on_add(self, item):
 		print "added"
 
@@ -22,7 +22,7 @@ class ExampleHandler(pp.FileEventHandler):
 def main():
 	here = os.path.abspath(os.path.dirname(__file__)) 
 	handler = ExampleHandler()
-	observer = pp.FileObserver()
+	observer = patlabor.FileObserver()
 	observer.observedExts.append('.txt')
 	observer.setSchedule(handler=handler,
 						 interval=1,
@@ -33,7 +33,7 @@ def main():
 	f = open("hoge.txt", "w")
 	time.sleep(2)
 	# modify .txt file
-	f.write("hello patolabor-python!")
+	f.write("hello patlabor-python!")
 	f.close()
 	time.sleep(2)	
 	# move .txt file
